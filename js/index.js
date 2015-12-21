@@ -10,6 +10,7 @@ $(function() {
 
     var logo = two.interpret($(doc).find('svg')[0]);
     logo.subdivide();
+    logo.noFill();
     var t = 0;
     var startOver = false;
     var clearT = function() {
@@ -20,8 +21,8 @@ $(function() {
 
     logo.center().translation.set(two.width / 2, two.height / 2);
     logo.distances = calculateDistances(logo);
-    logo.total = 0;  logo.stroke = 'white';
-    logo.linewidth = 1;
+    logo.total = 0;  logo.stroke = '#ed4f7e';
+    logo.linewidth = 2;
     _.each(logo.distances, function(d) {
       logo.total += d;
     });
